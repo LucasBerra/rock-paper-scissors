@@ -25,15 +25,20 @@ body {
 }
 
 header {
-  margin: 30px;
+  margin: 15px;
   padding: 0 20px;
   width: 30vw;
+  max-width: 555px;
   background-color: rgba($color: #292929, $alpha: 0.2);
   color: #000000;
   box-shadow:   -8px 0 0 0 #292929,
                  8px 0 0 0 #292929,
                  0 -8px 0 0 #292929,
                  0 8px 0 0 #292929;
+  h3 {
+    font-size: 20px;
+    margin: 0 0 10px;
+  }
 }
 
 h2 {
@@ -57,11 +62,15 @@ button {
 }
 
 main {
+  margin: 15px;
   display: flex;
   justify-content: center;
+  align-content: flex-start;
+  gap: 0;
   flex-wrap: wrap;
   min-height: 360px;
-  width: 800px;
+  width: 740px;
+  max-width: 100%;
   box-shadow:   -8px 0 0 0 #292929,
                  8px 0 0 0 #292929,
                  0 -8px 0 0 #292929,
@@ -89,3 +98,104 @@ img {
     width: 100%;
   }
 }
+
+/******************** MEDIA QUERIES ********************/
+
+@media (max-width: 1200px) {
+  #page-body {
+    flex-direction: column;
+  }
+
+  header {
+    margin: 15px;
+    padding: 0 20px;
+    width: 100%;
+    h1 {
+      font-size: 24px;
+    }
+    h2 {
+      display: none;
+    }
+    h3 {
+      font-size: 18px;
+    }
+    box-shadow:  -6px 0 0 0 #292929,
+                 6px 0 0 0 #292929,
+                 0 -6px 0 0 #292929,
+                 0 6px 0 0 #292929;
+  }
+
+  main {
+    box-shadow: -6px 0 0 0 #292929,
+                6px 0 0 0 #292929,
+                0 -6px 0 0 #292929,
+                0 6px 0 0 #292929;
+  }
+
+  .round-container {
+    img {
+      width: 100px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    margin-top: 0;
+    padding: 0;
+    box-shadow:  -4px 0 0 0 #292929,
+                 4px 0 0 0 #292929,
+                 0 -4px 0 0 #292929,
+                 0 4px 0 0 #292929;
+    h1 {
+      font-size: 20px;
+    }
+    h3 {
+      font-size: 16px;
+    }
+    button {
+      margin: 10px 10px 20px;
+    }
+  }
+
+  main {
+    box-shadow:  -4px 0 0 0 #292929,
+                 4px 0 0 0 #292929,
+                 0 -4px 0 0 #292929,
+                 0 4px 0 0 #292929;
+  }
+
+  .round-container {
+    img {
+      width: 72px;
+    }
+    h3 {
+      font-size: 15px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    h3 {
+      margin: 10px;
+    }
+    button {
+      margin: 8px 8px 20px;
+    }
+  }
+}
+
+
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {}

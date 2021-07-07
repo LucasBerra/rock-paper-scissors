@@ -102,16 +102,14 @@ function scissors() {
   if (rivalImg.getAttribute("class") === "paper") {
     ownPoints += 1;
     roundResult.textContent = "You win!";
-    roundContainer.appendChild(roundResult);
   } else if (rivalImg.getAttribute("class") === "rock") {
     rivalPoints += 1;
     roundResult.textContent = "Orange wins";
-    roundContainer.appendChild(roundResult);
   } else if (rivalImg.getAttribute("class") === "scissors") {
     roundResult.textContent = "Tied, try again";
-    roundContainer.appendChild(roundResult);
   }
-  
+  roundContainer.appendChild(roundResult);
+
   currentGame.appendChild(roundContainer);
   gameEndCheck();
 }
