@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "Symtext";
+  src: url("/font/Symtext.ttf");
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Symtext", serif;
+  height: 100%;
+  background: rgb(200, 191, 231);
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+#page-body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+header {
+  margin: 30px;
+  padding: 0 20px;
+  width: 30vw;
+  background-color: rgba($color: #292929, $alpha: 0.2);
+  color: #000000;
+  box-shadow:   -8px 0 0 0 #292929,
+                 8px 0 0 0 #292929,
+                 0 -8px 0 0 #292929,
+                 0 8px 0 0 #292929;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  font-family: "Symtext", serif;
+  width: 100px;
+  height: 30px;
+  margin: 20px;
+  box-shadow:   -4px 0 0 0 #292929,
+                 4px 0 0 0 #292929,
+                 0 -4px 0 0 #292929,
+                 0 4px 0 0 #292929;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 360px;
+  width: 800px;
+  box-shadow:   -8px 0 0 0 #292929,
+                 8px 0 0 0 #292929,
+                 0 -8px 0 0 #292929,
+                 0 8px 0 0 #292929;
+}
+
+img {
+  display: inline;
+}
+
+.round-container {
+  width: fit-content;
+  height: fit-content;
+  padding: 6px;
+  margin: 6px;
+  background-color: rgba($color: #000000, $alpha: 0.35)
+}
+
+.end-container {
+  height: fit-content;
+  padding: 6px;
+  margin: 6px;
+  background-color: rgba($color: #000000, $alpha: 0.35);
+  img {
+    width: 100%;
+  }
+}

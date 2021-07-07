@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "Symtext";
+  src: url("/font/Symtext.ttf");
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Symtext", serif;
+  height: 100%;
+  background: #c8bfe7;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+#page-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+header {
+  margin: 30px;
+  padding: 0 20px;
+  width: 30vw;
+  background-color: rgba(41, 41, 41, 0.2);
+  color: #000000;
+  -webkit-box-shadow: -8px 0 0 0 #292929, 8px 0 0 0 #292929, 0 -8px 0 0 #292929, 0 8px 0 0 #292929;
+          box-shadow: -8px 0 0 0 #292929, 8px 0 0 0 #292929, 0 -8px 0 0 #292929, 0 8px 0 0 #292929;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  font-family: "Symtext", serif;
+  width: 100px;
+  height: 30px;
+  margin: 20px;
+  -webkit-box-shadow: -4px 0 0 0 #292929, 4px 0 0 0 #292929, 0 -4px 0 0 #292929, 0 4px 0 0 #292929;
+          box-shadow: -4px 0 0 0 #292929, 4px 0 0 0 #292929, 0 -4px 0 0 #292929, 0 4px 0 0 #292929;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 360px;
+  width: 800px;
+  -webkit-box-shadow: -8px 0 0 0 #292929, 8px 0 0 0 #292929, 0 -8px 0 0 #292929, 0 8px 0 0 #292929;
+          box-shadow: -8px 0 0 0 #292929, 8px 0 0 0 #292929, 0 -8px 0 0 #292929, 0 8px 0 0 #292929;
+}
+
+img {
+  display: inline;
+}
+
+.round-container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 6px;
+  margin: 6px;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.end-container {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 6px;
+  margin: 6px;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.end-container img {
+  width: 100%;
+}
+/*# sourceMappingURL=index.css.map */
