@@ -118,13 +118,17 @@ function scissors() {
 
 /* disables buttons once the game is over [used in gameEndCheck()] */
 function disableButtons() {
-  let buttons = document.querySelectorAll('button');
+  let buttons = document.querySelectorAll('.game-button');
   for (i = 0; i < buttons.length; i++) {
     buttons[i].setAttribute("disabled", "disabled");
     console.log(buttons[i]);
   }
+  /* set Try Again button */
+  let tryAgain = document.createElement('button');
+  tryAgain.setAttribute("onclick", "window.location.reload()");
+  tryAgain.textContent = "Try Again!";
+  document.querySelector('header').appendChild(tryAgain);
 }
-
 
 /* checks if the game has ended */
 function gameEndCheck () {
