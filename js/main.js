@@ -1,47 +1,86 @@
-
-let currentGame = document.querySelector("#current-game");
+const currentGame = document.querySelector("#current-game");
 let ownPoints = 0;
 let rivalPoints = 0;
+let tieCounter = 0;
 
-function createRoundContainer () {
-  let container = document.createElement('div');
+const createRoundContainer = () => {
+  let container = document.createElement("div");
   container.setAttribute("class", "round-container");
   return container;
-}
+};
 
 /* function to pick the opponents hand randomly */
-function opponentOption () {
+const opponentOption = (playerChoice) => {
   let rivalImg = new Image();
-  let rivalOption = Math.round(Math.random() * (3 - 1)) + 1;
-  
-  switch (rivalOption) {
-    case 1:
-      rivalImg.setAttribute("src", "/assets/p2-rock.png");
-      rivalImg.setAttribute("class", "rock");
-      break;
-    case 2:
-      rivalImg.setAttribute("src", "/assets/p2-paper.png");
-      rivalImg.setAttribute("class", "paper");
-      break;
-    case 3:
-      rivalImg.setAttribute("src", "/assets/p2-scissors.png");
-      rivalImg.setAttribute("class", "scissors");
-      break;
+  let rivalOption;
+  if (tieCounter < 3) {
+    rivalOption = Math.round(Math.random() * (3 - 1)) + 1;
+    switch (rivalOption) {
+      case 1:
+        rivalImg.setAttribute("src", "/assets/p2-rock.png");
+        rivalImg.setAttribute("class", "rock");
+        break;
+      case 2:
+        rivalImg.setAttribute("src", "/assets/p2-paper.png");
+        rivalImg.setAttribute("class", "paper");
+        break;
+      case 3:
+        rivalImg.setAttribute("src", "/assets/p2-scissors.png");
+        rivalImg.setAttribute("class", "scissors");
+        break;
+    }
+  } else {
+    rivalOption = Math.round(Math.random() * (2 - 1)) + 1;
+    if (playerChoice === "rock") {
+      switch (rivalOption) {
+        case 1:
+          rivalImg.setAttribute("src", "/assets/p2-paper.png");
+          rivalImg.setAttribute("class", "paper");
+          break;
+        case 2:
+          rivalImg.setAttribute("src", "/assets/p2-scissors.png");
+          rivalImg.setAttribute("class", "scissors");
+          break;
+      }
+    } else if (playerChoice === "paper") {
+      switch (rivalOption) {
+        case 1:
+          rivalImg.setAttribute("src", "/assets/p2-rock.png");
+          rivalImg.setAttribute("class", "rock");
+          break;
+        case 2:
+          rivalImg.setAttribute("src", "/assets/p2-scissors.png");
+          rivalImg.setAttribute("class", "scissors");
+          break;
+      }
+    } else {
+      switch (rivalOption) {
+        case 1:
+          rivalImg.setAttribute("src", "/assets/p2-rock.png");
+          rivalImg.setAttribute("class", "rock");
+          break;
+        case 2:
+          rivalImg.setAttribute("src", "/assets/p2-paper.png");
+          rivalImg.setAttribute("class", "paper");
+          break;
+      }
+    }
   }
+
   return rivalImg;
-}
+};
 
 /* option pocking logic */
-const rock = () => {
+function rock() {
   let roundContainer = createRoundContainer();
 
   let img = new Image();
   img.setAttribute("src", "assets/p1-rock.png");
   roundContainer.appendChild(img);
-  
-  let rivalImg = opponentOption();
+
+  let rivalImg = opponentOption("rock");
   roundContainer.appendChild(rivalImg);
-  
+
   let roundResult = document.createElement("h3");
   if (rivalImg.getAttribute("class") === "scissors") {
     ownPoints += 1;
@@ -53,9 +92,10 @@ const rock = () => {
     roundContainer.appendChild(roundResult);
   } else if (rivalImg.getAttribute("class") === "rock") {
     roundResult.textContent = "Tied, try again";
+    tieCounter = tieCounter + 1;
     roundContainer.appendChild(roundResult);
   }
-  
+
   currentGame.appendChild(roundContainer);
   gameEndCheck();
 }
@@ -66,10 +106,10 @@ function paper() {
   let img = new Image();
   img.setAttribute("src", "assets/p1-paper.png");
   roundContainer.appendChild(img);
-  
-  let rivalImg = opponentOption();
+
+  let rivalImg = opponentOption("paper");
   roundContainer.appendChild(rivalImg);
-  
+
   let roundResult = document.createElement("h3");
   if (rivalImg.getAttribute("class") === "rock") {
     ownPoints += 1;
@@ -81,9 +121,10 @@ function paper() {
     roundContainer.appendChild(roundResult);
   } else if (rivalImg.getAttribute("class") === "paper") {
     roundResult.textContent = "Tied, try again";
+    tieCounter += 1;
     roundContainer.appendChild(roundResult);
   }
-  
+
   currentGame.appendChild(roundContainer);
   gameEndCheck();
 }
@@ -94,10 +135,10 @@ function scissors() {
   let img = new Image();
   img.setAttribute("src", "assets/p1-scissors.png");
   roundContainer.appendChild(img);
-  
-  let rivalImg = opponentOption();
+
+  let rivalImg = opponentOption("scissors");
   roundContainer.appendChild(rivalImg);
-  
+
   let roundResult = document.createElement("h3");
   if (rivalImg.getAttribute("class") === "paper") {
     ownPoints += 1;
@@ -107,6 +148,7 @@ function scissors() {
     roundResult.textContent = "Orange wins";
   } else if (rivalImg.getAttribute("class") === "scissors") {
     roundResult.textContent = "Tied, try again";
+    tieCounter += 1;
   }
   roundContainer.appendChild(roundResult);
 
@@ -116,51 +158,48 @@ function scissors() {
 
 /* disables buttons once the game is over [used in gameEndCheck()] */
 function disableButtons() {
-  let buttons = document.querySelectorAll('.game-button');
+  let buttons = document.querySelectorAll(".game-button");
   for (i = 0; i < buttons.length; i++) {
     buttons[i].setAttribute("disabled", "disabled");
-    console.log(buttons[i]);
   }
   /* set Try Again button */
-  let tryAgain = document.createElement('button');
+  let tryAgain = document.createElement("button");
   tryAgain.setAttribute("onclick", "window.location.reload()");
   tryAgain.textContent = "Try Again!";
-  document.querySelector('header').appendChild(tryAgain);
+  document.querySelector("header").appendChild(tryAgain);
 }
 
 /* checks if the game has ended */
-function gameEndCheck () {
+function gameEndCheck() {
   if (ownPoints === 2) {
     let endContainer = document.createElement("div");
     endContainer.setAttribute("class", "end-container");
 
     let endImg = new Image();
-    endImg.setAttribute("src", "assets/player-win.png")
+    endImg.setAttribute("src", "assets/player-win.png");
     endContainer.appendChild(endImg);
 
-    let endMessage = document.createElement('h3');
+    let endMessage = document.createElement("h3");
     endMessage.textContent = "YOU WON THE GAME!!";
     endContainer.appendChild(endMessage);
-    
+
     currentGame.appendChild(endContainer);
 
     disableButtons();
-
   } else if (rivalPoints === 2) {
     let endContainer = document.createElement("div");
     endContainer.setAttribute("class", "end-container");
 
     let endImg = new Image();
-    endImg.setAttribute("src", "assets/player-lose.png")
+    endImg.setAttribute("src", "assets/player-lose.png");
     endContainer.appendChild(endImg);
 
-    let endMessage = document.createElement('h3');
+    let endMessage = document.createElement("h3");
     endMessage.textContent = "You lost, this time...";
     endContainer.appendChild(endMessage);
-    
+
     currentGame.appendChild(endContainer);
 
     disableButtons();
   }
 }
-
