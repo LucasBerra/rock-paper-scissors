@@ -39,8 +39,8 @@ header {
   max-width: 555px;
   background-color: rgba(41, 41, 41, 0.2);
   color: #000000;
-  -webkit-box-shadow: -8px 0 0 0 #292929, 8px 0 0 0 #292929, 0 -8px 0 0 #292929, 0 8px 0 0 #292929;
-          box-shadow: -8px 0 0 0 #292929, 8px 0 0 0 #292929, 0 -8px 0 0 #292929, 0 8px 0 0 #292929;
+  -webkit-box-shadow: -8px 0 0 0 #292929, 8px 0 0 0 #292929, 0 -8px 0 0 #292929, 0 8px 0 0 #292929;
+          box-shadow: -8px 0 0 0 #292929, 8px 0 0 0 #292929, 0 -8px 0 0 #292929, 0 8px 0 0 #292929;
 }
 
 header h3 {
@@ -62,8 +62,8 @@ button {
   width: 100px;
   height: 30px;
   margin: 20px;
-  -webkit-box-shadow: -4px 0 0 0 #292929, 4px 0 0 0 #292929, 0 -4px 0 0 #292929, 0 4px 0 0 #292929;
-          box-shadow: -4px 0 0 0 #292929, 4px 0 0 0 #292929, 0 -4px 0 0 #292929, 0 4px 0 0 #292929;
+  -webkit-box-shadow: -4px 0 0 0 #292929, 4px 0 0 0 #292929, 0 -4px 0 0 #292929, 0 4px 0 0 #292929;
+          box-shadow: -4px 0 0 0 #292929, 4px 0 0 0 #292929, 0 -4px 0 0 #292929, 0 4px 0 0 #292929;
 }
 
 main {
@@ -82,8 +82,8 @@ main {
   min-height: 360px;
   width: 740px;
   max-width: 100%;
-  -webkit-box-shadow: -8px 0 0 0 #292929, 8px 0 0 0 #292929, 0 -8px 0 0 #292929, 0 8px 0 0 #292929;
-          box-shadow: -8px 0 0 0 #292929, 8px 0 0 0 #292929, 0 -8px 0 0 #292929, 0 8px 0 0 #292929;
+  -webkit-box-shadow: -8px 0 0 0 #292929, 8px 0 0 0 #292929, 0 -8px 0 0 #292929, 0 8px 0 0 #292929;
+          box-shadow: -8px 0 0 0 #292929, 8px 0 0 0 #292929, 0 -8px 0 0 #292929, 0 8px 0 0 #292929;
 }
 
 img {
@@ -127,8 +127,8 @@ img {
     margin: 15px;
     padding: 0 20px;
     width: 100%;
-    -webkit-box-shadow: -6px 0 0 0 #292929, 6px 0 0 0 #292929, 0 -6px 0 0 #292929, 0 6px 0 0 #292929;
-            box-shadow: -6px 0 0 0 #292929, 6px 0 0 0 #292929, 0 -6px 0 0 #292929, 0 6px 0 0 #292929;
+    -webkit-box-shadow: -6px 0 0 0 #292929, 6px 0 0 0 #292929, 0 -6px 0 0 #292929, 0 6px 0 0 #292929;
+            box-shadow: -6px 0 0 0 #292929, 6px 0 0 0 #292929, 0 -6px 0 0 #292929, 0 6px 0 0 #292929;
   }
   header h1 {
     font-size: 24px;
@@ -140,8 +140,8 @@ img {
     font-size: 18px;
   }
   main {
-    -webkit-box-shadow: -6px 0 0 0 #292929, 6px 0 0 0 #292929, 0 -6px 0 0 #292929, 0 6px 0 0 #292929;
-            box-shadow: -6px 0 0 0 #292929, 6px 0 0 0 #292929, 0 -6px 0 0 #292929, 0 6px 0 0 #292929;
+    -webkit-box-shadow: -6px 0 0 0 #292929, 6px 0 0 0 #292929, 0 -6px 0 0 #292929, 0 6px 0 0 #292929;
+            box-shadow: -6px 0 0 0 #292929, 6px 0 0 0 #292929, 0 -6px 0 0 #292929, 0 6px 0 0 #292929;
   }
   .round-container img {
     width: 100px;
@@ -152,8 +152,8 @@ img {
   header {
     margin-top: 0;
     padding: 0;
-    -webkit-box-shadow: -4px 0 0 0 #292929, 4px 0 0 0 #292929, 0 -4px 0 0 #292929, 0 4px 0 0 #292929;
-            box-shadow: -4px 0 0 0 #292929, 4px 0 0 0 #292929, 0 -4px 0 0 #292929, 0 4px 0 0 #292929;
+    -webkit-box-shadow: -4px 0 0 0 #292929, 4px 0 0 0 #292929, 0 -4px 0 0 #292929, 0 4px 0 0 #292929;
+            box-shadow: -4px 0 0 0 #292929, 4px 0 0 0 #292929, 0 -4px 0 0 #292929, 0 4px 0 0 #292929;
   }
   header h1 {
     font-size: 20px;
@@ -165,8 +165,8 @@ img {
     margin: 10px 10px 20px;
   }
   main {
-    -webkit-box-shadow: -4px 0 0 0 #292929, 4px 0 0 0 #292929, 0 -4px 0 0 #292929, 0 4px 0 0 #292929;
-            box-shadow: -4px 0 0 0 #292929, 4px 0 0 0 #292929, 0 -4px 0 0 #292929, 0 4px 0 0 #292929;
+    -webkit-box-shadow: -4px 0 0 0 #292929, 4px 0 0 0 #292929, 0 -4px 0 0 #292929, 0 4px 0 0 #292929;
+            box-shadow: -4px 0 0 0 #292929, 4px 0 0 0 #292929, 0 -4px 0 0 #292929, 0 4px 0 0 #292929;
   }
   .round-container img {
     width: 72px;

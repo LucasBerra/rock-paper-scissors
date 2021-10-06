@@ -84,13 +84,16 @@ function rock() {
   let roundResult = document.createElement("h3");
   if (rivalImg.getAttribute("class") === "scissors") {
     ownPoints += 1;
+    roundResult.style.color = "rgb(0, 75, 25)";
     roundResult.textContent = "You win!";
     roundContainer.appendChild(roundResult);
   } else if (rivalImg.getAttribute("class") === "paper") {
     rivalPoints += 1;
+    roundResult.style.color = "rgb(102, 0, 0)";
     roundResult.textContent = "Orange wins";
     roundContainer.appendChild(roundResult);
   } else if (rivalImg.getAttribute("class") === "rock") {
+    roundResult.style.color = "rgb(30, 30, 40)";
     roundResult.textContent = "Tied, try again";
     tieCounter = tieCounter + 1;
     roundContainer.appendChild(roundResult);
@@ -113,13 +116,16 @@ function paper() {
   let roundResult = document.createElement("h3");
   if (rivalImg.getAttribute("class") === "rock") {
     ownPoints += 1;
+    roundResult.style.color = "rgb(0, 75, 25)";
     roundResult.textContent = "You win!";
     roundContainer.appendChild(roundResult);
   } else if (rivalImg.getAttribute("class") === "scissors") {
     rivalPoints += 1;
+    roundResult.style.color = "rgb(102, 0, 0)";
     roundResult.textContent = "Orange wins";
     roundContainer.appendChild(roundResult);
   } else if (rivalImg.getAttribute("class") === "paper") {
+    roundResult.style.color = "rgb(30, 30, 40)";
     roundResult.textContent = "Tied, try again";
     tieCounter += 1;
     roundContainer.appendChild(roundResult);
@@ -142,11 +148,14 @@ function scissors() {
   let roundResult = document.createElement("h3");
   if (rivalImg.getAttribute("class") === "paper") {
     ownPoints += 1;
+    roundResult.style.color = "rgb(0, 75, 25)";
     roundResult.textContent = "You win!";
   } else if (rivalImg.getAttribute("class") === "rock") {
     rivalPoints += 1;
+    roundResult.style.color = "rgb(102, 0, 0)";
     roundResult.textContent = "Orange wins";
   } else if (rivalImg.getAttribute("class") === "scissors") {
+    roundResult.style.color = "rgb(30, 30, 40)";
     roundResult.textContent = "Tied, try again";
     tieCounter += 1;
   }
@@ -180,6 +189,7 @@ function gameEndCheck() {
     endContainer.appendChild(endImg);
 
     let endMessage = document.createElement("h3");
+    endMessage.style.color = "rgb(0, 75, 25)";
     endMessage.textContent = "YOU WON THE GAME!!";
     endContainer.appendChild(endMessage);
 
@@ -195,6 +205,7 @@ function gameEndCheck() {
     endContainer.appendChild(endImg);
 
     let endMessage = document.createElement("h3");
+    endMessage.style.color = "rgb(102, 0, 0)";
     endMessage.textContent = "You lost, this time...";
     endContainer.appendChild(endMessage);
 
