@@ -27,16 +27,17 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 50px;
 }
 
 header {
   margin: 15px;
   padding: 0 20px;
   width: 30vw;
-  max-width: 555px;
+  max-width: 450px;
   background-color: rgba(41, 41, 41, 0.2);
   color: #000000;
   -webkit-box-shadow: -8px 0 0 0 #292929, 8px 0 0 0 #292929, 0 -8px 0 0 #292929, 0 8px 0 0 #292929;
@@ -44,12 +45,16 @@ header {
 }
 
 header h3 {
-  font-size: 20px;
+  font-size: 18px;
   margin: 0 0 10px;
 }
 
+h1 {
+  font-size: 28px;
+}
+
 h2 {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 h3 {
@@ -61,7 +66,7 @@ button {
   font-family: "Symtext", serif;
   width: 100px;
   height: 30px;
-  margin: 20px;
+  margin: 10px 10px 16px;
   -webkit-box-shadow: -4px 0 0 0 #292929, 4px 0 0 0 #292929, 0 -4px 0 0 #292929, 0 4px 0 0 #292929;
           box-shadow: -4px 0 0 0 #292929, 4px 0 0 0 #292929, 0 -4px 0 0 #292929, 0 4px 0 0 #292929;
 }
@@ -79,7 +84,7 @@ main {
   gap: 0;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  min-height: 360px;
+  min-height: 335px;
   width: 740px;
   max-width: 100%;
   -webkit-box-shadow: -8px 0 0 0 #292929, 8px 0 0 0 #292929, 0 -8px 0 0 #292929, 0 8px 0 0 #292929;
@@ -122,11 +127,18 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    padding: 15px 0;
+    gap: 10px;
   }
   header {
     margin: 15px;
     padding: 0 20px;
-    width: 100%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     -webkit-box-shadow: -6px 0 0 0 #292929, 6px 0 0 0 #292929, 0 -6px 0 0 #292929, 0 6px 0 0 #292929;
             box-shadow: -6px 0 0 0 #292929, 6px 0 0 0 #292929, 0 -6px 0 0 #292929, 0 6px 0 0 #292929;
   }
@@ -142,6 +154,8 @@ img {
   main {
     -webkit-box-shadow: -6px 0 0 0 #292929, 6px 0 0 0 #292929, 0 -6px 0 0 #292929, 0 6px 0 0 #292929;
             box-shadow: -6px 0 0 0 #292929, 6px 0 0 0 #292929, 0 -6px 0 0 #292929, 0 6px 0 0 #292929;
+    min-height: 315px;
+    width: 680px;
   }
   .round-container img {
     width: 100px;
@@ -149,6 +163,9 @@ img {
 }
 
 @media (max-width: 768px) {
+  #page-body {
+    gap: 0px;
+  }
   header {
     margin-top: 0;
     padding: 0;
@@ -160,6 +177,7 @@ img {
   }
   header h3 {
     font-size: 16px;
+    margin: 10px;
   }
   header button {
     margin: 10px 10px 20px;
@@ -167,6 +185,8 @@ img {
   main {
     -webkit-box-shadow: -4px 0 0 0 #292929, 4px 0 0 0 #292929, 0 -4px 0 0 #292929, 0 4px 0 0 #292929;
             box-shadow: -4px 0 0 0 #292929, 4px 0 0 0 #292929, 0 -4px 0 0 #292929, 0 4px 0 0 #292929;
+    width: 505px;
+    min-height: 246px;
   }
   .round-container img {
     width: 72px;
@@ -177,11 +197,66 @@ img {
 }
 
 @media (max-width: 576px) {
+  #page-body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 0px;
+    gap: 10px;
+  }
+  header {
+    padding-bottom: 12px;
+  }
   header h3 {
     margin: 10px;
   }
   header button {
-    margin: 8px 8px 20px;
+    width: 80px;
+    height: 30px;
+    margin: 8px;
+    font-size: 12px;
+  }
+  .try-again {
+    min-height: 30px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main {
+    width: 325px;
+    min-height: 235px;
+  }
+  .round-container {
+    margin: 4px;
+  }
+  .round-container img {
+    width: 70px;
+  }
+}
+
+@media (max-width: 330px) {
+  header h1 {
+    font-size: 18px;
+    margin: 10px;
+  }
+  header h3 {
+    padding: 0;
+    margin: 10px;
+    font-size: 14px;
+  }
+  main {
+    width: 280px;
+    min-height: 208px;
+  }
+  .round-container {
+    margin: 4px;
+  }
+  .round-container img {
+    width: 60px;
+  }
+  .round-container h3 {
+    font-size: 12px;
   }
 }
 /*# sourceMappingURL=index.css.map */

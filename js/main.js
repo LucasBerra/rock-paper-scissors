@@ -174,6 +174,7 @@ function disableButtons() {
   /* set Try Again button */
   let tryAgain = document.createElement("button");
   tryAgain.setAttribute("onclick", "window.location.reload()");
+  tryAgain.setAttribute("class", "try-again");
   tryAgain.textContent = "Try Again!";
   document.querySelector("header").appendChild(tryAgain);
 }
